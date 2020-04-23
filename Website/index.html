@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Attendance</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.5.0.js" ></script>
+    <script type="text/javascript">
+      $(window).on('scroll', function(){
+        if($(window).scrollTop()){
+          $('nav').addClass('black');
+        }
+        else{
+          $('nav').removeClass('black');
+        }
+      })
+    </script>
+  </head>
+  <body>
+    <nav>
+      <div class="black">
+
+      <label class="logo"><img src="image/logo.png" alt=""></label>
+        <ul class="navbar">
+          <li><a href="#" class="active">home</a></li>
+          <li><a href="#quote">about</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#login">Attendance</a></li>
+          <li><a href="#">feedback</a></li>
+          <li><a href="#footer">contact us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="preview">
+      <div class="overlay">
+          <div class="slogan">
+            <H1>Attend Today, Achieve Tommorow.</H1>
+          </div>
+          <div class="join">
+            <a href="#login">Sign Up</a>
+            <a href="#login">Log In</a>
+          </div>
+      </div>
+
+      <div class="seperator1"></div>
+    </section>
+
+
+    <section class="content">
+        <p id="quote">“Positive student behavior support helps educators and
+         parents appreciate good behavior,
+         and motivates all students to achieve.”</p>
+      <p class="para">Absenteeism negatively impacts student’s academic performance.
+         Students with poor attendance received a poor grade.
+         Most faculty members concede that the regular class attendance helps student learn and improve academic outcomes.
+         In fact, truant student’s relationship with faculty is also a critical factor that affects attendance.
+         And student were also not able to maintain there 75% attendance.<br><br>
+         The good news is that implementing cloud and mobile-based attendance management system in educational institutions will have a positive impact on student attendance. Schools, colleges and higher education institutes can use these
+         innovative strategies to keep attendance high in classrooms. </p>
+    </section>
+
+    <section id="gallery">
+      <div class="out">
+        <div class="box1"></div>
+        <p>Hello, how are you</p>
+      </div>
+      <div class="out">
+        <div class="box2"></div>
+        <p>Nice to meet you</p>
+      </div>
+      <div class="out">
+        <div class="box3"></div>
+        <p>Come play with me</p>
+      </div>
+    </section>
+
+
+    <section id="login">
+      <div class="login-box">
+        <div class="left-box">
+          <h1>Sign Up</h1>
+          <form class="register" action="index.html" method="post" id="sign-up">
+            <input type="text" name="user name" value="User Name">
+            <input type="text" name="Email id" value="Email id">
+            <input type="text" name="Password" value="Password">
+            <input type="text" name="Confirm Password" value="Confirm Password">
+            <button type="button" name="button">Sign Up</button>
+            <p class="message">Already have an account? <a href="#sign-in">Sign in</a>
+            </p>
+        </form>
+      </div>
+      <div class="right-box">
+          <span class="signinwith">Sign in with  <br>  </span>
+          <button type="button" name="button" class="social facebook">Log in with Facebook</button>
+          <button type="button" name="button" class="social Twitter">Log in with Twitter</button>
+          <button type="button" name="button" class="social google">Log in with Google</button>
+      </div>
+    </div>
+    </section>
+
+    <div class="seperator2"></div>
+
+    <section id="lower">
+        <div class="left">
+          <div class="container1">
+            <div class="front">
+              <img src="image/logo.png" alt="">
+            </div>
+            <div class="back">
+              <img src="image/logo.png" alt="">
+            </div>
+          </div>
+        </div>
+          <div class=lowlist>
+            <h2>Student Lifecycle Solutions</h2>
+            <ul>
+              <li><a href="#">Admissions & Enrollment</a></li>
+              <li><a href="#">Attendance</a></li>
+              <li><a href="#">Assessment</a></li>
+              <li><a href="#">Learning Management system</a></li>
+            </ul>
+          </div>
+          <div class=lowlist>
+            <h2>Academic Solutions</h2>
+            <ul>
+              <li><a href="#">Scheduling</a></li>
+              <li><a href="#">Student Information System</a></li>
+              <li><a href="#">Faculty Management System</a></li>
+            </ul>
+          </div>
+          <div class=lowlist>
+            <h2>Company</h2>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+    </section>
+
+    <div class="topbutton-container">
+      <a id="topbutton" href="#preview">Scroll To Top</a>
+    </div>
+
+    <footer id="footer">
+      <div class="container">
+        <p>Copyright &copy; <span id="peerich">PeeRich</span> 2020</p>
+      </div>
+    </footer>
+  </body>
+</html>
