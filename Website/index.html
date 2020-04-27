@@ -2,34 +2,47 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Attendance</title>
-
+    <title>PeeRich</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="https://code.jquery.com/jquery-3.5.0.js" ></script>
     <script type="text/javascript">
       $(window).on('scroll', function(){
         if($(window).scrollTop()){
-          $('nav').addClass('black');
+          document.getElementById("underlay").style.backgroundColor = "rgba(0,0,0,0.8)";
+          document.getElementById("underlay").style.height = "80px";
+          document.getElementById("logo").style.width = "80px";
+          document.getElementById("logo").style.margin = "0px";
+          document.getElementById("list-container").style.padding = "0px";
+          document.getElementById("navlist").style.backgroundColor = "rgb(0,0,0,0)";
         }
         else{
-          $('nav').removeClass('black');
+          document.getElementById("underlay").style.backgroundColor = "rgba(0,0,0,0)";
+          document.getElementById("underlay").style.height = "100px";
+          document.getElementById("logo").style.width = "150px";
+          document.getElementById("logo").style.margin = "20px";
+          document.getElementById("list-container").style.paddingTop = "50px";
+          document.getElementById("navlist").style.backgroundColor = "rgb(0,0,0,0)";
         }
       })
     </script>
   </head>
-  <body>
-    <nav>
-      <div class="black">
 
-      <label class="logo"><img src="image/logo.png" alt=""></label>
-        <ul class="navbar">
-          <li><a href="#" class="active">home</a></li>
-          <li><a href="#quote">about</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#login">Attendance</a></li>
-          <li><a href="#">feedback</a></li>
-          <li><a href="#footer">contact us</a></li>
-        </ul>
+  <body>
+
+    <nav id="navbar">
+      <div id="underlay">
+        <img id="logo" src="image/logo.png" alt="">
+        <div id="list-container">
+          <ul id=navlist>
+            <li><a href="#" class="active">home</a></li>
+            <li><a href="#quote">about</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#login">Attendance</a></li>
+            <li><a href="#contact">contact</a></li>
+            <li><a href="#footer">assistance</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
 
@@ -62,17 +75,20 @@
     </section>
 
     <section id="gallery">
-      <div class="out">
-        <div class="box1"></div>
-        <p>Hello, how are you</p>
-      </div>
-      <div class="out">
-        <div class="box2"></div>
-        <p>Nice to meet you</p>
-      </div>
-      <div class="out">
-        <div class="box3"></div>
-        <p>Come play with me</p>
+      <h1>Gallery</h1>
+      <div class="box">
+        <div class="out">
+          <div class="box1"></div>
+          <p>Hello, how are you</p>
+        </div>
+        <div class="out">
+          <div class="box2"></div>
+          <p>Nice to meet you</p>
+        </div>
+        <div class="out">
+          <div class="box3"></div>
+          <p>Come play with me</p>
+        </div>
       </div>
     </section>
 
@@ -82,10 +98,10 @@
         <div class="left-box">
           <h1>Sign Up</h1>
           <form class="register" action="index.html" method="post" id="sign-up">
-            <input type="text" name="user name" value="User Name">
-            <input type="text" name="Email id" value="Email id">
-            <input type="text" name="Password" value="Password">
-            <input type="text" name="Confirm Password" value="Confirm Password">
+            <input type="text" name="user name" placeholder="User Name">
+            <input type="text" name="Email id" placeholder="Email id">
+            <input type="text" name="Password" placeholder="Password">
+            <input type="text" name="Confirm Password" placeholder="Confirm Password">
             <button type="button" name="button">Sign Up</button>
             <p class="message">Already have an account? <a href="#sign-in">Sign in</a>
             </p>
@@ -100,7 +116,31 @@
     </div>
     </section>
 
-    <div class="seperator2"></div>
+
+    <section id="contact">
+      <div class="box">
+        <h1>CONTACT</h1>
+        <h2>Lets get in touch. Send us a message:</h2>
+        <div class="inner-box">
+
+          <h3><i class="material-icons" style="font-size:36px;">place</i> &nbsp;&nbsp; New Delhi, India</h3>
+          <h3><i class="material-icons" style="font-size:36px;">smartphone</i> &nbsp;&nbsp; +1 831 422 3905</h3>
+          <h3><i class="material-icons" style="font-size:36px;">mail</i> &nbsp;&nbsp; contact@peerich.com</h3>
+          <br>
+          <form>
+            <input type="text" placeholder="Name" required name="Name">
+            <input type="text" placeholder="Email" required name="Email">
+            <input type="text" placeholder="Subject" required name="Subject">
+            <input type="text" placeholder="Message" required name="Message">
+            <button type="submit">SEND MESSAGE</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="seperator2"></div>
+    </section>
 
     <section id="lower">
         <div class="left">
@@ -133,8 +173,8 @@
           <div class=lowlist>
             <h2>Company</h2>
             <ul>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><a href="#quote">About Us</a></li>
+              <li><a href="#contact">Contact Us</a></li>
             </ul>
           </div>
     </section>
